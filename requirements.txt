@@ -1,0 +1,6 @@
+# Python 3.14. Install with:  pip install -r requirements.txt
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+tabulate>=0.9      # markdown tables in the generated data-quality report
+pypdf>=5.0         # reading the project scope/roadmap PDFs
