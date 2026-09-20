@@ -1,0 +1,2 @@
+- added what are the kips and business question for this project in that project scope file
+-And in raw data folder i added one more small excel of investment data
