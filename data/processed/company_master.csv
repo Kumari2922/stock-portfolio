@@ -1,0 +1,9 @@
+ticker,company_name,sector,in_portfolio,investment_cad,allocation_pct,listing
+AAPL,Apple Inc.,Technology,True,20000.0,20.0,US
+AMZN,"Amazon.com, Inc.",Consumer Discretionary,True,15000.0,15.0,US
+MSFT,Microsoft Corporation,Technology,True,20000.0,20.0,US
+NVDA,NVIDIA Corporation,Technology,True,15000.0,15.0,US
+RY,Royal Bank of Canada,Banking,True,10000.0,10.0,US (NYSE)
+SHOP,Shopify Inc.,Technology,False,0.0,0.0,US
+TD,Toronto-Dominion Bank,Banking,True,10000.0,10.0,US (NYSE)
+TSLA,"Tesla, Inc.",Consumer Discretionary,True,10000.0,10.0,US
