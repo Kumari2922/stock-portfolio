@@ -1,0 +1,4 @@
+sector,investment_cad,current_value_cad,profit_loss_cad,profit_loss_status,return_pct,cagr_pct,ending_weight_pct,contribution_to_growth_pct
+Technology,55000.0,20220971.07,20165971.07,Profit,36665.4,44.66,81.72,81.83
+Consumer Discretionary,25000.0,4364345.29,4339345.29,Profit,17357.38,38.08,17.64,17.61
+Banking,20000.0,157879.21,137879.21,Profit,689.4,13.78,0.64,0.56

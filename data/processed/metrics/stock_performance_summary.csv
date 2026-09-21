@@ -1,0 +1,8 @@
+ticker,company_name,sector,investment_cad,shares,purchase_price_cad,current_price_cad,current_value_cad,profit_loss_cad,profit_loss_status,return_pct,cagr_pct,annualised_volatility_pct,sharpe_ratio,max_drawdown_pct,max_drawdown_date,risk_level,return_rank,sharpe_rank,risk_rank_1_is_riskiest,performance_rank
+NVDA,NVIDIA Corporation,Technology,15000.0,60035.0605,0.2499,306.8128,18419524.52,18404524.52,Profit,122696.83,55.98,44.93,1.148,-63.46,2022-10-14,High,1,1,2,1
+AAPL,Apple Inc.,Technology,20000.0,2346.335,8.5239,471.3956,1106052.0,1086052.0,Profit,5430.26,28.51,27.84,0.935,-40.81,2013-04-19,Medium,3,2,4,2
+TSLA,"Tesla, Inc.",Consumer Discretionary,10000.0,7177.1485,1.3933,512.2406,3676426.58,3666426.58,Profit,36664.27,44.66,56.45,0.883,-71.07,2023-01-03,High,2,3,1,2
+MSFT,Microsoft Corporation,Technology,20000.0,998.7675,20.0247,696.2527,695394.55,675394.55,Profit,3376.97,24.83,26.04,0.869,-34.58,2026-03-27,Medium,5,4,5,4
+AMZN,"Amazon.com, Inc.",Consumer Discretionary,15000.0,1957.8488,7.6615,351.3646,687918.71,672918.71,Profit,4486.12,27.01,32.83,0.802,-52.56,2022-12-28,Medium,4,5,3,4
+RY,Royal Bank of Canada,Banking,10000.0,301.2478,33.1953,284.7537,85781.44,75781.44,Profit,757.81,14.38,17.68,0.68,-34.24,2020-03-23,Low,6,6,7,6
+TD,Toronto-Dominion Bank,Banking,10000.0,423.1392,23.6329,170.3878,72097.77,62097.77,Profit,620.98,13.14,18.76,0.594,-35.99,2020-03-23,Low,7,7,6,7

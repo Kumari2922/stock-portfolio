@@ -1,0 +1,8 @@
+ticker,opening_weight_pct,ending_value_cad,ending_weight_pct,profit_loss_cad,profit_loss_status,contribution_to_growth_pct
+NVDA,15.0,18419524.52,74.44,18404524.52,Profit,74.68
+TSLA,10.0,3676426.58,14.86,3666426.58,Profit,14.88
+AAPL,20.0,1106052.0,4.47,1086052.0,Profit,4.41
+MSFT,20.0,695394.55,2.81,675394.55,Profit,2.74
+AMZN,15.0,687918.71,2.78,672918.71,Profit,2.73
+RY,10.0,85781.44,0.35,75781.44,Profit,0.31
+TD,10.0,72097.77,0.29,62097.77,Profit,0.25
