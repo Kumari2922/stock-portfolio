@@ -1,0 +1,48 @@
+// Create one measure at a time. Query names must match POWER_BI_GUIDE.md.
+// Financial cards use the full study period, while retaining ticker selections.
+
+Initial Investment = SUM(Holdings[investment_cad])
+
+Holding Value = SUM(HoldingValues[holding_value_cad])
+
+Ending Value =
+VAR LastStudyDate = CALCULATE(MAX(HoldingValues[date]), REMOVEFILTERS(Calendar), REMOVEFILTERS(HoldingValues[date]))
+RETURN CALCULATE([Holding Value], REMOVEFILTERS(Calendar), HoldingValues[date] = LastStudyDate)
+
+Profit = [Ending Value] - [Initial Investment]
+
+// Format this measure as Percentage, not as a raw percentage-point column.
+Total Return = DIVIDE([Profit], [Initial Investment])
+
+CAGR =
+VAR FirstStudyDate = CALCULATE(MIN(HoldingValues[date]), REMOVEFILTERS(Calendar), REMOVEFILTERS(HoldingValues[date]))
+VAR LastStudyDate = CALCULATE(MAX(HoldingValues[date]), REMOVEFILTERS(Calendar), REMOVEFILTERS(HoldingValues[date]))
+VAR Years = DIVIDE(DATEDIFF(FirstStudyDate, LastStudyDate, DAY), 365.25)
+VAR Multiple = DIVIDE([Ending Value], [Initial Investment])
+RETURN IF(Years > 0 && Multiple > 0, POWER(Multiple, 1 / Years) - 1)
+
+// Use ticker as legend/detail. Returns BLANK without a single ticker in context.
+Stock Growth Index =
+VAR FirstStudyDate = CALCULATE(MIN(HoldingValues[date]), REMOVEFILTERS(Calendar), REMOVEFILTERS(HoldingValues[date]))
+VAR OpeningValue = CALCULATE([Holding Value], REMOVEFILTERS(Calendar), HoldingValues[date] = FirstStudyDate)
+RETURN IF(HASONEVALUE(Holdings[ticker]), DIVIDE([Holding Value], OpeningValue) * 100)
+
+// Percentage of all portfolio profit, not percentage of a currently filtered subtotal.
+Profit Contribution = DIVIDE([Profit], CALCULATE([Profit], REMOVEFILTERS(Holdings)))
+
+// Percentage of the full portfolio's ending value, retaining context in numerator.
+Ending Weight = DIVIDE([Ending Value], CALCULATE([Ending Value], REMOVEFILTERS(Holdings)))
+
+Opening Weight = DIVIDE([Initial Investment], CALCULATE([Initial Investment], REMOVEFILTERS(Holdings)))
+
+// Source values are percentage points. Convert to decimal for Percentage formatting.
+Stock CAGR = IF(HASONEVALUE(Holdings[ticker]), MAX(Holdings[cagr]) / 100)
+
+Stock Volatility = IF(HASONEVALUE(Holdings[ticker]), MAX(Holdings[volatility]) / 100)
+
+Stock Max Drawdown = IF(HASONEVALUE(Holdings[ticker]), MAX(Holdings[drawdown]) / 100)
+
+Stock Sharpe = IF(HASONEVALUE(Holdings[ticker]), MAX(Holdings[sharpe]))
+
+// Use year and ticker on matrix axes to ensure one annual observation per cell.
+Annual Return = IF(COUNTROWS(AnnualReturns) = 1, MAX(AnnualReturns[annual_return_pct]) / 100)

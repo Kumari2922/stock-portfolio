@@ -1,0 +1,27 @@
+{
+  "source_commit": "ab14073f1ac3f6d3b1e61cfbb6ae2a726047f610",
+  "start": "2010-09-17",
+  "end": "2026-09-17",
+  "trading_days": 4024,
+  "holdings": [
+    "AAPL",
+    "AMZN",
+    "MSFT",
+    "NVDA",
+    "RY",
+    "TD",
+    "TSLA"
+  ],
+  "kpis": {
+    "final": 24743195.570058502,
+    "total_return": 24643.195570058502,
+    "cagr": 41.12078601784237,
+    "volatility": 32.792952634574284,
+    "sharpe": 1.1259026677480164,
+    "drawdown": -56.7026188961904
+  },
+  "max_sql_csv_difference_cad": 0.012471690773963928,
+  "status": "passed",
+  "notes": "DB share counts rounded to 4 decimals; dashboard uses exact investment / first close.",
+  "browser_checks": "Passed four pages, presets, scenario arithmetic, zero-weight validation, CSV download, event window, 390px viewport, no JS errors."
+}
