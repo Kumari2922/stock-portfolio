@@ -217,7 +217,7 @@ Four analysts, one repository, one week of sprint.
 | | Contribution |
 |---|---|
 | **[@Kumari2922](https://github.com/Kumari2922)** | Project scope, KPIs & business questions · data collection · SQLite database · SQL analysis · Power BI dashboard |
-| **Samir Omer** | Data cleaning & validation · exploratory analysis · SQL KPI layer & views · project review |
+| **[@samiromer2](https://github.com/samiromer2)** | Data cleaning & validation · exploratory analysis · SQL KPI layer & views · project review |
 | **[@KiranGill08](https://github.com/KiranGill08)** | Financial performance metrics — portfolio value, CAGR, Sharpe, drawdown, weights, contribution to growth |
 | **[@AshishSachdev](https://github.com/AshishSachdev)** | Sprint framework & project standard · interactive dashboards · Power BI build kit |
 
